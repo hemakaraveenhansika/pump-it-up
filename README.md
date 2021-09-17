@@ -16,8 +16,8 @@ https://github.com/hemakaraveenhansika/pump-it-up
     9.	Most of the government  funded water points are non-functional.
     10.	Iringa ,Klimanjaro, Arusha have higher portions for functional pumps.
 
-    * numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
-    * category_columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
+    - numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
+    - category_columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
 
 ## 03 . Pre-processing approaches
 
@@ -78,7 +78,7 @@ https://github.com/hemakaraveenhansika/pump-it-up
         3	XGBClassifier	Onehot Encoder	0.809428 -> best result
 
 ## 07. Modelling approaches
-    1. Random Forest
+    1. Random Forest Classifier
     2. XGB Classifier
 
     According to scores values for Random Forest Classifier and XGB Classifier, XGB Classifier gave better results. I used XGB Classifier to predict outputs.
