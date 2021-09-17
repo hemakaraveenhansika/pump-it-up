@@ -17,7 +17,7 @@ https://github.com/hemakaraveenhansika/pump-it-up
     10.	Iringa ,Klimanjaro, Arusha have higher portions for functional pumps.
 
     numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
-    category__columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source','waterpoint_type']
+    category__columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
 
 03 . Pre-processing approaches
 
@@ -33,7 +33,7 @@ https://github.com/hemakaraveenhansika/pump-it-up
 
 04. Feature engineering approaches
 
-    1. Target Encoding for categorical columns - 
+    1. Target Encoding for categorical columns
     2. Other - Used RobustScaler to scale all the numerical columns
 
 
@@ -78,7 +78,7 @@ https://github.com/hemakaraveenhansika/pump-it-up
 
 07. Post-processing (insight extraction) approaches
 
-    1.Feature Importance
+    1. Feature Importance
         Random Forest, highest ranks - longitude, latitude
         Random Forest, lowest ranks - water_quality_fluoride abandoned, waterpoint_type_dam
 
@@ -86,6 +86,6 @@ https://github.com/hemakaraveenhansika/pump-it-up
         XGBClassifier, lowest ranks - id, water_quality_fluoride abandoned, waterpoint_type_dam
 
         
-    2.Partial dependence plots
+    2. Partial dependence plots
         Most of the new pumps are functional pumps. Most of the old pumps are non-functional
         For pumps with highest amount_tsh and gps_height are functional. Lowest amount_tsh and gps_height are non-functional
