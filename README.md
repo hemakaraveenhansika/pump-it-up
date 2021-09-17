@@ -49,15 +49,15 @@ https://github.com/hemakaraveenhansika/pump-it-up
 06. Other feature pre-processing/ feature engineering approaches 
 
     drop unwanted columns
-        1. management_group : similar to 'management', 'management' has more detailed values
-        2. scheme_management : similar to 'management', 'scheme_management' has 3877 null values
-        3. quantity_group : similar to 'quantity'
-        4. source_class : similar to 'source'
-        5. source_type : similar to 'source'
-        6. quality_group : similar to 'water_quality'
-        7. payment_type : similar to 'payment'
-        8. extraction_type : similar to 'extraction_type_group', 'extraction_type_group' has more compact values
-        9. extraction_type_class : similar to 'extraction_type_group', 'extraction_type_group' has more detailed values
+        1.  management_group : similar to 'management', 'management' has more detailed values
+        2.  scheme_management : similar to 'management', 'scheme_management' has 3877 null values
+        3.  quantity_group : similar to 'quantity'
+        4.  source_class : similar to 'source'
+        5.  source_type : similar to 'source'
+        6.  quality_group : similar to 'water_quality'
+        7.  payment_type : similar to 'payment'
+        8.  extraction_type : similar to 'extraction_type_group', 'extraction_type_group' has more compact values
+        9.  extraction_type_class : similar to 'extraction_type_group', 'extraction_type_group' has more detailed values
         10. waterpoint_type_group : similar to 'waterpoint_type', 'waterpoint_type' has more detailed values
         11. recorded_by : has only one value, doesn't have any information
         12. wpt_name : does not have any information about functionality
@@ -65,6 +65,7 @@ https://github.com/hemakaraveenhansika/pump-it-up
         14. num_private : most of the values are zero
         15. date_recorded : does not have necessary information about functionality
         16. subvillage : region and region_code are representing the same thing
+
     
     'installer' and 'funder' have a lot of categories. Select most 20 frequent categories from each records and set ‘other’ for rest of categories.
 
