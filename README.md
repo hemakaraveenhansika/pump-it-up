@@ -1,9 +1,9 @@
-## pump-it-up
+# pump-it-up
 
-# 01. Git hub link
+## 01. Git hub link
 https://github.com/hemakaraveenhansika/pump-it-up
 
-# 02. Explotary data analysis (EDA)
+## 02. Explotary data analysis (EDA)
 
     1.	Most of the dry quantity pumps are non-functional. Functional and functional need repair are more similarly distributed across the other quantity values.
     2.	Most of the pumps with an enough quality_group are functional.  Most of the pumps with an unknow quality_group are non-functional.
@@ -16,10 +16,10 @@ https://github.com/hemakaraveenhansika/pump-it-up
     9.	Most of the government  funded water points are non-functional.
     10.	Iringa ,Klimanjaro, Arusha have higher portions for functional pumps.
 
-    - numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
-    - category__columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
+    * numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
+    * category_columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
 
-# 03 . Pre-processing approaches
+## 03 . Pre-processing approaches
 
     1. One-hot encoding for categorical columns
     2. Label encoding for 'status_group' columns
@@ -31,13 +31,13 @@ https://github.com/hemakaraveenhansika/pump-it-up
         public_meeting -> replace true Nan values
         permit -> replace true Nan values
 
-# 04. Feature engineering approaches
+## 04. Feature engineering approaches
 
     1. Target Encoding for categorical columns
     2. Other - Used RobustScaler to scale all the numerical columns
 
 
-# 05. Feature selection
+## 05. Feature selection
     Check feature ranking for both Random Forest Classifier and xgboost Classifier
     According to the xgboost Classifier feature ranking,
         Highest rank - [no 122 feature] quantity_dry feature (0.397269)
@@ -46,18 +46,18 @@ https://github.com/hemakaraveenhansika/pump-it-up
                        [no 141 feature] waterpoint_type_dam feature (0.000000)
     Remove lowest 3 features(id, water_quality_fluoride abandoned, waterpoint_type_dam) and model again.
 
-# 06. Other feature pre-processing/ feature engineering approaches 
+## 06. Other feature pre-processing/ feature engineering approaches 
 
     drop unwanted columns
-        1. management_group : similar to 'management', 'management' has more detailed values
-        2. scheme_management : similar to 'management', 'scheme_management' has 3877 null values
-        3. quantity_group : similar to 'quantity'
-        4. source_class : similar to 'source'
-        5. source_type : similar to 'source'
-        6. quality_group : similar to 'water_quality'
-        7. payment_type : similar to 'payment'
-        8. extraction_type : similar to 'extraction_type_group', 'extraction_type_group' has more compact values
-        9. extraction_type_class : similar to 'extraction_type_group', 'extraction_type_group' has more detailed values
+        1.  management_group : similar to 'management', 'management' has more detailed values
+        2.  scheme_management : similar to 'management', 'scheme_management' has 3877 null values
+        3.  quantity_group : similar to 'quantity'
+        4.  source_class : similar to 'source'
+        5.  source_type : similar to 'source'
+        6.  quality_group : similar to 'water_quality'
+        7.  payment_type : similar to 'payment'
+        8.  extraction_type : similar to 'extraction_type_group', 'extraction_type_group' has more compact values
+        9.  extraction_type_class : similar to 'extraction_type_group', 'extraction_type_group' has more detailed values
         10. waterpoint_type_group : similar to 'waterpoint_type', 'waterpoint_type' has more detailed values
         11. recorded_by : has only one value, doesn't have any information
         12. wpt_name : does not have any information about functionality
@@ -77,7 +77,13 @@ https://github.com/hemakaraveenhansika/pump-it-up
         2	XGBClassifier	Target Encoder	0.807912
         3	XGBClassifier	Onehot Encoder	0.809428 -> best result
 
-# 07. Post-processing (insight extraction) approaches
+## 07. Modelling approaches
+    1. Random Forest
+    2. XGB Classifier
+
+    According to scores values for Random Forest Classifier and XGB Classifier, XGB Classifier gave better results. I used XGB Classifier to predict outputs.
+
+## 08. Post-processing (insight extraction) approaches
 
     1. Feature Importance
         Random Forest, highest ranks - longitude, latitude
