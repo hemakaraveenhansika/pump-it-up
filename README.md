@@ -5,16 +5,16 @@ https://github.com/hemakaraveenhansika/pump-it-up
 
 ## 02. Explotary data analysis (EDA)
 
-    1.	Most of the dry quantity pumps are non-functional. Functional and functional need repair are more similarly distributed across the other quantity values.
-    2.	Most of the pumps with an enough quality_group are functional.  Most of the pumps with an unknow quality_group are non-functional.
-    3.	Most of the old pumps are non-functional.  Most of the new pumps are functional.  
-    4.	Most of the pumps with central government and district council installed are non-functional. Most of the pumps with DWE  installed are functional. 
-    5.	communal standpipe waterpoint type has higher possibility to have functional. Other waterpoint_type has higher possibility for non-functionality.
-    6.	A lots of non-functional water points have soft, salty and unknown water quality.
-    7.	There are lots of non-functional water points as never paid.
-    8.	Most of other and mono extraction types are non-functional than functional pumps.
-    9.	Most of the government  funded water points are non-functional.
-    10.	Iringa ,Klimanjaro, Arusha have higher portions for functional pumps.
+    1.  Most of the dry quantity pumps are non-functional. Functional and functional need repair are more similarly distributed across the other quantity values.
+    2.  Most of the pumps with an enough quality_group are functional.  Most of the pumps with an unknow quality_group are non-functional.
+    3.  Most of the old pumps are non-functional.  Most of the new pumps are functional.  
+    4.  Most of the pumps with central government and district council installed are non-functional. Most of the pumps with DWE  installed are functional. 
+    5.  communal standpipe waterpoint type has higher possibility to have functional. Other waterpoint_type has higher possibility for non-functionality.
+    6.  A lots of non-functional water points have soft, salty and unknown water quality.
+    7.  There are lots of non-functional water points as never paid.
+    8.  Most of other and mono extraction types are non-functional than functional pumps.
+    9.  Most of the government  funded water points are non-functional.
+    10. Iringa ,Klimanjaro, Arusha have higher portions for functional pumps.
 
     - numeric_columns = ['amount_tsh', 'gps_height', 'longitude', 'latitude', 'district_code', 'population', 'construction_year', 'public_meeting', 'permit']
     - category_columns = ['installer','quantity', 'payment', 'funder', 'basin','region',  'extraction_type_group', 'management', 'water_quality', 'source', 'waterpoint_type']
